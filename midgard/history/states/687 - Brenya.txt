@@ -1,0 +1,31 @@
+
+state={
+	id=687
+	name="STATE_687"
+
+	state_category = metropolis
+
+	history={
+		buildings = {
+			infrastructure = 7
+			arms_factory = 3
+			industrial_complex = 5
+		}
+		victory_points = { 13401 25 }
+		victory_points = { 13404 1 }
+		victory_points = { 13405 1 }
+		victory_points = { 13406 1 }
+		victory_points = { 13407 5 }
+		victory_points = { 13408 15 }
+		victory_points = { 13409 15 }
+		victory_points = { 13410 1 }
+		owner = BRE
+		add_core_of = BRE
+	}
+
+	provinces={
+		13396 13400 13401 13403 13404 13405 13406 13407 13408 13409 13410 13411
+	}
+	manpower=3419427
+	buildings_max_level_factor=1.000
+}

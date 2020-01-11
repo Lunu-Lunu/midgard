@@ -1,0 +1,45 @@
+division_template = {
+	name = "Knights of Fenloch"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+	}
+}
+division_template = {
+	name = "Peasant Levy"
+
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+units = {
+	division = {
+		name = "Guards of Ismeria"
+		location = 13356
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Guards of Lucina"
+		location = 13392
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Guards of Tethys"
+		location = 13387
+		division_template = "Peasant Levy"
+		start_experience_factor = 0.1
+	}
+}

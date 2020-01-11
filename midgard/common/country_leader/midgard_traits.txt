@@ -1,0 +1,12 @@
+leader_traits = {
+	alicern_puppet = {
+		random = no
+		stability_factor = 0.1
+		democratic_drift = 0.005
+		democratic_acceptance = 70
+	}
+	leonidas_i_trait = {
+		random = no
+		political_power_cost = 0.1
+	}
+}

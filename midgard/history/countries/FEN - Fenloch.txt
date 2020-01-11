@@ -1,0 +1,96 @@
+﻿capital = 686
+oob = "FEN_1007"
+set_research_slots = 3
+
+set_technology = {
+	generic_race = 1
+	melee_weapons = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+set_popularities = {
+	democratic = 44
+	fascism = 0
+	communism = 21
+	neutrality = 35
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+	poor_science_base
+	agrarian_society
+	lack_of_scientists
+	poverty
+	feudalism
+	FEN_gold_mines
+	alicernians_3
+}
+reverse_add_opinion_modifier = { target = ATH modifier = FEN_reputation }
+reverse_add_opinion_modifier = { target = BRE modifier = FEN_reputation }
+reverse_add_opinion_modifier = { target = GAI modifier = FEN_reputation }
+reverse_add_opinion_modifier = { target = GUI modifier = FEN_reputation }
+reverse_add_opinion_modifier = { target = MUN modifier = FEN_reputation }
+reverse_add_opinion_modifier = { target = PHE modifier = FEN_reputation }
+reverse_add_opinion_modifier = { target = HKG modifier = FEN_reputation }
+
+set_stability = 0.55
+
+create_country_leader = {
+	name = "Nathaniel Maxim Caellach"
+	desc = ""
+	picture = "Nathaniel_Caellach.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		alicern_puppet
+	}
+}
+
+create_country_leader = {
+	name = "Alicern"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+
+	}
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

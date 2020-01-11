@@ -1,0 +1,24 @@
+
+state={
+	id=699
+	name="STATE_699"
+
+	state_category = pastoral
+
+	history={
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = { 13864 3 }
+		victory_points = { 13751 3 }
+		owner = HKG
+		add_core_of = HKG
+	}
+
+	provinces={
+		13350 13743 13744 13745 13746 13761 13762 13747 13748 13749 13750 13751 13752 13753 13754 13767 13768 13770 13850 13851 13852 13853 13854 13855 13857 13858 13859 13860 13861 13862 13863 13864 13865 13866 13867
+	}
+	manpower=184299
+	buildings_max_level_factor=1.000
+}

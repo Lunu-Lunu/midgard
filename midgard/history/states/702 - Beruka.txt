@@ -1,0 +1,24 @@
+
+state={
+	id=702
+	name="STATE_702"
+
+	state_category = town
+
+	history={
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = { 13830 30 }
+		owner = HKG
+		add_core_of = HKG
+	}
+
+	provinces={
+		13360 13366 13725 13726 13727 13825 13826 13827 13828 13829 13830 13831 13832 13833 13834 13835 13836 13837 13838 13839 13840 13841 13842 13843 13844 13845 13846 13847 13848 13849 13856
+	}
+	manpower=950283
+	buildings_max_level_factor=1.000
+}

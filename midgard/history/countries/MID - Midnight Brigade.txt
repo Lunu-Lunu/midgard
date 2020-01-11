@@ -1,0 +1,173 @@
+﻿capital = 685
+set_research_slots = 3
+
+set_technology = {
+	generic_race = 1
+	melee_weapons = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 100
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+	poor_science_base
+	agrarian_society
+	lack_of_scientists
+	poverty2
+}
+
+set_stability = 0.6
+set_war_support = 0.9
+
+create_country_leader = {
+	name = "Quint Mizuki"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_field_marshal  = {
+	name = "Quint Mizuki"
+	id = 83500
+	portrait_path = ""
+	traits = { brilliant_strategist inspiring_leader midnight_brigade_member }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Neya Mizuki"
+	id = 83501
+	portrait_path = ""
+	traits = { trait_reckless infantry_officer promising_general midnight_brigade_member }
+	skill = 1
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Benjamin Masters"
+	id = 83502
+	portrait_path = ""
+	traits = { old_guard midnight_brigade_member }
+	skill = 4
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 5
+}
+create_corps_commander = {
+	name = "Corwen Redsill"
+	id = 83503
+	portrait_path = "gfx/leaders/MID/Corwen.dds"
+	traits = { medical_expert midnight_brigade_member }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Nero"
+	id = 83504
+	portrait_path = ""
+	traits = { trait_cautious trickster promising_general midnight_brigade_member }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Sharla Aranea"
+	id = 83505
+	portrait_path = ""
+	traits = { trait_reckless armor_officer midnight_brigade_member }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Bryn Kyrie"
+	id = 83506
+	portrait_path = ""
+	traits = { air_force_commander midnight_brigade_member }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Kasumi Mizuki"
+	id = 83507
+	portrait_path = ""
+	traits = { trait_unpredictable midnight_brigade_member }
+	skill = 1
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Delman Sinclaire"
+	id = 83508
+	portrait_path = ""
+	traits = { infantry_leader inflexible_strategist midnight_brigade_member }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+set_rule = {
+	can_generate_female_aces = yes
+}

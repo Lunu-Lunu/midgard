@@ -1,0 +1,30 @@
+
+state={
+	id=700
+	name="STATE_700"
+
+	state_category = metropolis
+
+	history={
+		buildings = {
+			infrastructure = 8
+			arms_factory = 3
+			industrial_complex = 2
+			13720 = {
+				naval_base = 7
+			}
+		}
+		victory_points = { 13755 10 }
+		victory_points = { 13720 50 }
+		victory_points = { 13722 1 }
+		victory_points = { 13724 3 }
+		owner = HKG
+		add_core_of = HKG
+	}
+
+	provinces={
+		13349 13719 13720 13721 13722 13723 13724 13742 13755 13756 13757 13758 13759 13760 13878
+	}
+	manpower=2589428
+	buildings_max_level_factor=1.000
+}

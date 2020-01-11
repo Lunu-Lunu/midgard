@@ -1,0 +1,29 @@
+
+state={
+	id=694
+	name="STATE_694"
+
+	state_category = rural
+
+	history={
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			13462 = {
+				naval_base = 6
+			}
+			13467 = {
+				naval_base = 2
+			}
+		}
+		victory_points = { 13467 1 }
+		owner = MUN
+		add_core_of = MUN
+	}
+
+	provinces={
+		1511 13364 13462 13463 13464 13465 13466 13467 13468 13469 13470 13573 13574 13576 13577 13595 13596 13597 
+	}
+	manpower=586399
+	buildings_max_level_factor=1.000
+}

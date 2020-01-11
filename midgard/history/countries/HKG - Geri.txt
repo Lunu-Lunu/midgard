@@ -1,0 +1,184 @@
+﻿capital = 700
+oob = "HKG_1007"
+set_research_slots = 3
+
+set_technology = {
+	generic_race = 1
+	melee_weapons = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+set_popularities = {
+	democratic = 19
+	fascism = 59
+	communism = 0
+	neutrality = 22
+}
+set_politics = {
+
+	ruling_party = fascism
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+	poor_science_base
+	agrarian_society
+	lack_of_scientists
+	feudalism
+	astra_faithful
+	HKG_decadent_church
+	HKG_niflheims_resistance
+	HKG_astras_whispers
+	HKG_secular_heir
+	HKG_midas_advisor
+}
+set_country_flag = poor_science_base_unlocked
+set_stability = 0.70
+
+create_country_leader = {
+	name = "Ymir Niflheim"
+	desc = ""
+	picture = "Ymir_Niflheim.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Leonidas I Kartr"
+	desc = ""
+	picture = "Leonidas_Kartr_First.dds"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		leonidas_i_trait
+	}
+}
+
+create_country_leader = {
+	name = "Leonidas II Kartr"
+	desc = ""
+	picture = "Leonidas_Kartr_Second.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_field_marshal = {
+	name = "Martkur Armistice"
+	picture = ""
+	traits = { war_hero brilliant_strategist inspirational_leader wielder_hrotti }
+	skill = 5
+	attack_skill = 6
+	defense_skill = 5
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Leonidas I Kartr"
+	picture = "Leonidas_Kartr_First.dds"
+	traits = { politically_connected }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 7
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Miranda Kartr"
+	picture = ""
+	traits = { politically_connected }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Midas Avalon"
+	id = 83509
+	picture = ""
+	traits = { politically_connected trait_cautious }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 7
+}
+create_corps_commander = {
+	name = "Jade Libitina"
+	picture = ""
+	traits = { harsh_leader trait_reckless }
+	skill = 3
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Victoria Seraphine"
+	picture = ""
+	traits = { harsh_leader trait_reckless }
+	skill = 4
+	attack_skill = 9
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Valt Moonstone"
+	picture = ""
+	traits = { harsh_leader trait_reckless }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Glena Sunstone"
+	picture = ""
+	traits = { trait_reckless }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

@@ -1,0 +1,48 @@
+midgard_mercenaries_category = {
+	icon = decision_cat_bunker
+	allowed = {
+		OR = {
+			original_tag = HKG
+			original_tag = MUN
+			original_tag = FEN
+			original_tag = GAI
+			original_tag = GUI
+			original_tag = BRE
+			original_tag = ATH
+			original_tag = PHE
+			AND = {
+				original_tag = TOZ
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+	priority = {
+		base = 100
+	}
+}
+HKG_public_works_decision_category = {
+	icon = decision_cat_bunker
+	allowed = {
+		original_tag = HKG
+	}
+	visible = {
+		has_completed_focus = HKG_public_works_programs
+	}
+	priority = {
+		base = 90
+	}
+}
+HKG_savage_lands_stuff = {
+	icon = decision_cat_bunker
+	allowed = {
+		original_tag = HKG
+	}
+	visible = {
+		has_completed_focus = HKG_begin_preparations_war
+	}
+	priority = {
+		base = 95
+	}
+}

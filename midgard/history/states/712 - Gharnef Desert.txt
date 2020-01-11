@@ -1,0 +1,20 @@
+
+state={
+	id=712
+	name="STATE_712"
+
+	state_category = rural
+
+	history={
+		buildings = {
+			infrastructure = 1
+		}
+		owner = SAV
+	}
+
+	provinces={
+		13950 13951 13952 13953 13954 13955 13956 13957 13958 13959 13960 13961 13962 13963 13964 13965 13966 13967 13968 13969 13970 13971 13972 13973 13974
+	}
+	manpower=100000
+	buildings_max_level_factor=1.000
+}

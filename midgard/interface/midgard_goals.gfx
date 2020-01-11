@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_HKG_focus_attack_niflheim"
+		texturefile = "gfx/interface/goals/HKG_focus_attack_niflheim.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_HKG_focus_kill_niflheim"
+		texturefile = "gfx/interface/goals/HKG_focus_kill_niflheim.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_HKG_focus_chained_leonidas_ii"
+		texturefile = "gfx/interface/goals/HKG_focus_chained_leonidas_ii.dds"
+	}
+}

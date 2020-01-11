@@ -1,0 +1,128 @@
+﻿capital = 707
+oob = "TOZ_1007"
+set_research_slots = 3
+
+set_technology = {
+	generic_race = 1
+	melee_weapons = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+set_popularities = {
+	democratic = 7
+	fascism = 87
+	communism = 3
+	neutrality = 3
+}
+set_politics = {
+
+	ruling_party = fascism
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+	poor_science_base
+	agrarian_society
+	lack_of_scientists
+	poverty2
+	outlaw_economy
+	TOZ_bandit_army
+	TOZ_disjointed_command
+}
+
+set_stability = 0.6
+set_war_support = 0.9
+
+create_country_leader = {
+	name = "Raven Tōzoku"
+	desc = ""
+	picture = "Raven_Tozoku.dds"
+	expire = "1965.1.1"
+	ideology = bandit
+	traits = {
+	}
+}
+
+create_corps_commander  = {
+	name = "Raven Tōzoku"
+	portrait_path = "gfx/leaders/TOZ/Raven_Tozoku.dds"
+	traits = { brilliant_strategist inspiring_leader wielder_tartaros }
+	skill = 5
+	attack_skill = 9
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Razorteeth"
+	portrait_path = "gfx/leaders/TOZ/Razorteeth.dds"
+	traits = { trait_reckless harsh_leader }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Nine Adice"
+	portrait_path = ""
+	traits = { inflexible_strategist }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Ares Vulcan"
+	portrait_path = ""
+	traits = { armor_officer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Braedon Mimond"
+	portrait_path = ""
+	traits = { infantry_officer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+set_rule = {
+	can_generate_female_aces = yes
+}

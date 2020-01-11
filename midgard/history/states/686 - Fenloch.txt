@@ -1,0 +1,28 @@
+
+state={
+	id=686
+	name="STATE_686"
+
+	state_category = large_city
+
+	history={
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 5
+		}
+		victory_points = { 13356 15 }
+		victory_points = { 13395 1 }
+		victory_points = { 13392 5 }
+		victory_points = { 13390 1 }
+		victory_points = { 13387 1 }
+		owner = FEN
+		add_core_of = FEN
+	}
+
+	provinces={
+		13356 13365 13387 13388 13389 13390 13391 13392 13393 13394 13395
+	}
+	manpower=2806827
+	buildings_max_level_factor=1.000
+}

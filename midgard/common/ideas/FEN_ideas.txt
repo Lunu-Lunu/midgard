@@ -1,0 +1,60 @@
+ideas = {
+
+	country = {
+		FEN_gold_mines = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_foreign_capital
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.075
+				stability_factor = -0.2
+			}
+		}
+		alicernians_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				democratic_drift = 0.01
+			}
+		}
+		alicernians_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				democratic_drift = 0.02
+			}
+		}
+		alicernians_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				democratic_drift = 0.03
+			}
+		}
+	}
+}

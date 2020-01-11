@@ -1,0 +1,37 @@
+ideas = {
+
+	country = {
+		TOZ_bandit_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.03
+				conscription_factor = 0.25
+				army_org_factor = -0.15
+				army_morale_factor = 0.1
+				attrition = -0.05
+				supply_consumption_factor = -0.1
+				partisan_effect = 0.5
+			}
+		}
+		TOZ_disjointed_command = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				army_org_factor = -0.1
+				military_leader_cost_factor = 2
+				political_power_factor = -0.15
+				command_power_factor = -0.5
+			}
+		}
+	}
+}

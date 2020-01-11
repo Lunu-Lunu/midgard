@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_idea_corwen_redsill"
+		texturefile = "gfx/interface/ideas/corwen_redsill.dds"
+	}
+	
+}

@@ -1,0 +1,12 @@
+﻿l_english:
+ midgard_mercenaries_category:0 "Mercenaries for Hire"
+ hire_midnight_brigade:0 "Hire the Midnight Brigade"
+ remove_midnight_brigade:0 "Midnight Brigade's Contract"
+ HIRE_MIDNIGHT_BRIGADE_TT:0 "Four Midnight Brigade divisions will be spawned in your capital, and the Midnight Brigade's leadership will become available to you."
+ REMOVE_MIDNIGHT_BRIGADE_TT:0 "The Midnight Brigade will leave your country upon their contract's completion."
+ HKG_public_works_decision_category:0 "Public Works Projects"
+ HKG_develop_rural_regions_civ:0 "Expand Rural Civilian Industry"
+ HKG_develop_rural_regions_mil:0 "Expand Rural Military Industry"
+ HKG_develop_urban_regions_civ:0 "Expand Urban Civilian Industry"
+ HKG_develop_urban_regions_mil:0 "Expand Urban Military Industry"
+ HKG_expand_fenloch_mines:0 "Expand the Fenlochian Gold Mines"

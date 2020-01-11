@@ -1,0 +1,29 @@
+
+state={
+	id=685
+	name="STATE_685"
+
+	state_category = city
+
+	history={
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 3
+		}
+		victory_points = { 13370 15 }
+		victory_points = { 13371 5 }
+		victory_points = { 13374 1 }
+		victory_points = { 13372 1 }
+		victory_points = { 13369 1 }
+		victory_points = { 13377 1 }
+		owner = GAI
+		add_core_of = GAI
+	}
+
+	provinces={
+		13369 13370 13371 13372 13373 13374 13375 13376 13377
+	}
+	manpower=2174953
+	buildings_max_level_factor=1.000
+}

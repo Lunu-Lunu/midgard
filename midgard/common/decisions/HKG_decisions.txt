@@ -1,0 +1,303 @@
+HKG_public_works_decision_category = {
+	HKG_develop_rural_regions_civ = {
+		icon = generic_economy
+		cost = 50
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_war = yes
+				add = -5
+			}
+		}
+		visible = {
+			has_completed_focus = HKG_subsidize_rural_industry
+		}
+		days_remove = 120
+		days_re_enable = 90
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					OR = {
+						has_state_category = pastoral
+						has_state_category = rural
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	HKG_develop_rural_regions_mil = {
+		icon = rifles
+		cost = 50
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_war = yes
+				add = 5
+			}
+		}
+		visible = {
+			has_completed_focus = HKG_subsidize_rural_industry
+		}
+		days_remove = 120
+		days_re_enable = 150
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					OR = {
+						has_state_category = pastoral
+						has_state_category = rural
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	HKG_develop_urban_regions_civ = {
+		icon = generic_economy
+		cost = 50
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_war = yes
+				add = -5
+			}
+		}
+		visible = {
+			has_completed_focus = HKG_appropriate_noble_lands
+		}
+		days_remove = 90
+		days_re_enable = 60
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						has_state_category = small_town
+						has_state_category = town
+						has_state_category = city
+						has_state_category = metropolis
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	HKG_develop_urban_regions_mil = {
+		icon = rifles
+		cost = 50
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_war = yes
+				add = 5
+			}
+		}
+		visible = {
+			has_completed_focus = HKG_subsidize_rural_industry
+		}
+		days_remove = 90
+		days_re_enable = 120
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+					}
+					OR = {
+						has_state_category = small_town
+						has_state_category = town
+						has_state_category = city
+						has_state_category = metropolis
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	HKG_expand_fenloch_mines = {
+		icon = generic_economy
+		cost = 100
+		days_remove = 200
+		ai_will_do = {
+			factor = 25
+		}
+		visible = {
+			owns_state = 686
+		}
+		available = {
+			controls_state = 686
+		}
+		modifier = {
+			consumer_goods_factor = 0.05
+			local_resources_factor = -0.1
+		}
+		remove_effect = {
+			686 = {
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 6
+				}
+			}
+			add_ideas = { HKG_fenloch_mines }
+		}
+	}
+}
+HKG_savage_lands_stuff = {
+	HKG_negotiate_with_atrilkur = {
+		icon = generic_economy
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			NOT = {
+				owns_state = 709
+			}
+		}
+		modifier = {
+			political_power_cost = 0.33
+		}
+		days_remove = 60
+		remove_effect = {
+			transfer_state = 709
+		}
+	}
+	HKG_negotiate_with_nasrildr = {
+		icon = generic_economy
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			NOT = {
+				owns_state = 713
+			}
+		}
+		modifier = {
+			political_power_cost = 0.33
+		}
+		days_remove = 60
+		remove_effect = {
+			transfer_state = 713
+		}
+	}
+	HKG_negotiate_with_arnvidr = {
+		icon = generic_economy
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			NOT = {
+				owns_state = 710
+			}
+		}
+		modifier = {
+			political_power_cost = 0.33
+		}
+		days_remove = 60
+		remove_effect = {
+			transfer_state = 710
+		}
+	}
+	HKG_subjugate_the_atrilkur = {
+		icon = rifles
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			NOT = {
+				owns_state = 709
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			add_manpower = -10000
+			transfer_state = 709
+		}
+	}
+	HKG_subjugate_the_nasrildr = {
+		icon = rifles
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			NOT = {
+				owns_state = 713
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			add_manpower = -10000
+			transfer_state = 713
+		}
+	}
+	HKG_subjugate_the_arnvidr = {
+		icon = rifles
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			NOT = {
+				owns_state = 710
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			add_manpower = -10000
+			transfer_state = 710
+		}
+	}
+}

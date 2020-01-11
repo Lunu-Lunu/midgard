@@ -1,0 +1,51 @@
+division_template = {
+	name = "Knights of Athnes"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+	}
+}
+division_template = {
+	name = "Peasant Levy"
+
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+units = {
+	division = {
+		name = "Duke's Own"
+		location = 13379
+		division_template = "Knights of Athnes"
+		start_experience_factor = 1.0
+	}
+	division = {
+		name = "Knights of Helios"
+		location = 13380
+		division_template = "Knights of Athnes"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Knights of Duessel"
+		location = 13381
+		division_template = "Knights of Athnes"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Knights of Forde"
+		location = 13386
+		division_template = "Knights of Athnes"
+		start_experience_factor = 0.8
+	}
+}

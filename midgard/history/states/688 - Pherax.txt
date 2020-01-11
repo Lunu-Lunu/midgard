@@ -1,0 +1,28 @@
+
+state={
+	id=688
+	name="STATE_688"
+
+	state_category = city
+
+	history={
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 2
+		}
+		victory_points = { 13425 15 }
+		victory_points = { 13426 5 }
+		victory_points = { 13423 1 }
+		victory_points = { 13421 5 }
+		victory_points = { 13414 1 }
+		owner = PHE
+		add_core_of = PHE
+	}
+
+	provinces={
+		13412 13413 13414 13415 13416 13417 13418 13419 13420 13421 13422 13423 13424 13425 13426 13427
+	}
+	manpower=2478468
+	buildings_max_level_factor=1.000
+}

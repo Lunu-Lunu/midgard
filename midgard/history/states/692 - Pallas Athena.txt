@@ -1,0 +1,27 @@
+
+state={
+	id=692
+	name="STATE_692"
+
+	state_category = city
+
+	history={
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		victory_points = { 13538 25 }
+		victory_points = { 13540 1 }
+		victory_points = { 13557 1 }
+		victory_points = { 13554 1 }
+		owner = MUN
+		add_core_of = MUN
+	}
+
+	provinces={
+		1540 13454 13455 13456 13457 13458 13459 13460 13461 13522 13523 13524 13525 13526 13527 13528 13529 13530 13531 13532 13533 13534 13535 13536 13537 13538 13539 13540 13541 13542 13543 13544 13545 13546 13547 13548 13549 13550 13551 13552 13553 13554 13555 13556 13557 13558 13559 13560 13561 13563 13566
+	}
+	manpower=1527492
+	buildings_max_level_factor=1.000
+}

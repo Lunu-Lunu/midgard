@@ -1,0 +1,24 @@
+ATH = {
+	color = rgb { 255 126 0 }
+	color_ui = rgb { 255 126 0 }
+}
+GAI = {
+	color = rgb { 255 252 0 }
+	color_ui = rgb { 255 252 0 }
+}
+FEN = {
+	color = rgb { 220 220 220 }
+	color_ui = rgb { 220 220 220 }
+}
+BRE = {
+	color = rgb { 78 0 255 }
+	color_ui = rgb { 78 0 255 }
+}
+PHE = {
+	color = rgb { 255 0 0 }
+	color_ui = rgb { 255 0 0 }
+}
+GUI = {
+	color = rgb { 255 0 234 }
+	color_ui = rgb { 255 0 234 }
+}

@@ -1,0 +1,357 @@
+ideas = {
+	political_advisor = {
+		HKG_midas_advisor = {
+			allowed = {
+				original_tag = HKG
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = HKG_replace_pope
+				}
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.025
+				political_power_cost = 0.05
+			}
+		}
+		HKG_corwen_advisor = {
+			icon = corwen_redsill
+			allowed = {
+				original_tag = HKG
+			}
+			visible = {
+				has_completed_focus = HKG_replace_pope
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.05
+				surrender_limit = 0.05
+			}
+		}
+	}
+	country = {
+		astra_faithful = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				army_org_factor = 0.05
+				conscription = 0.005
+				war_support_factor = 0.1
+				fascism_drift = 0.01
+			}
+		}
+		HKG_decadent_church = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.15
+				conscription_factor = -0.05
+				consumer_goods_factor = 0.1
+				fascism_drift = -0.01
+			}
+		}
+		HKG_stimulating_church = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.1
+				conscription_factor = -0.05
+				consumer_goods_factor = 0.075
+				fascism_drift = -0.01
+			}
+		}
+		HKG_new_pope = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				conscription_factor = -0.05
+				consumer_goods_factor = 0.05
+				fascism_drift = -0.005
+			}
+		}
+		HKG_church_responsibilities = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+				conscription_factor = -0.05
+				consumer_goods_factor = 0.025
+			}
+		}
+		HKG_church_auxilaries = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				experience_loss_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+		HKG_niflheims_resistance = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.05
+				neutrality_drift = 0.01
+			}
+		}
+		HKG_anti_niflheim_campaign = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_cost = 0.25
+				neutrality_drift = -0.035
+			}
+		}
+		HKG_rallied_peasants = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				army_org_factor = -0.05
+				army_core_defence_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		HKG_astras_whispers = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.2
+				fascism_drift = 0.01
+			}
+		}
+		HKG_leonidas_kingdom = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.05
+				neutrality_drift = 0.02
+			}
+		}
+		HKG_secular_heir = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				democratic_drift = 0.01
+			}
+		}
+		HKG_foreign_advisors = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+				political_power_cost = 0.3
+				stability_factor = -0.05
+			}
+		}
+		HKG_foreign_investment = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+				stability_factor = -0.15
+			}
+		}
+		HKG_department_of_national_development = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+		HKG_tapping_resources = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				local_resources_factor = 0.2
+			}
+		}
+		HKG_noble_lands_taken = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.15
+			}
+		}
+		HKG_expensive_education = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+				research_speed_factor = 0.15
+			}
+		}
+		HKG_better_farms = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.01
+				MONTHLY_POPULATION = 0.2
+			}
+		}
+		HKG_modern_economy = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		HKG_public_works = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		HKG_fenloch_mines = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.035
+			}
+		}
+		HKG_minotaur_attache = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_experience_gain = 0.05
+			}
+			research_bonus = {
+				artillery = 0.05
+				cat_superior_firepower = 0.1
+			}
+		}
+		HKG_pony_attache = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_experience_gain = 0.03
+			}
+			research_bonus = {
+				infantry_weapons = 0.05
+				cat_grand_battleplan = 0.1
+			}
+		}
+		HKG_griffon_attache = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_experience_gain = 0.04
+			}
+			research_bonus = {
+				armor = 0.05
+				cat_mobile_warfare = 0.1
+			}
+		}
+	}
+}

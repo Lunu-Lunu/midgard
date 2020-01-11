@@ -1,0 +1,27 @@
+
+state={
+	id=703
+	name="STATE_703"
+
+	state_category = rural
+
+	history={
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			13686 = {
+				naval_base = 2
+			}
+		}
+		victory_points = { 13698 5 }
+		victory_points = { 13709 1 }
+		owner = HKG
+		add_core_of = HKG
+	}
+
+	provinces={
+		13348 13681 13682 13683 13684 13685 13686 13687 13688 13689 13690 13691 13692 13693 13694 13695 13696 13697 13698 13699 13700 13701 13702 13703 13704 13705 13706 13709 13710 13711 13712 
+	}
+	manpower=732838
+	buildings_max_level_factor=1.000
+}

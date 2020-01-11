@@ -1,0 +1,27 @@
+
+state={
+	id=696
+	name="STATE_696"
+
+	state_category = town
+
+	history={
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		victory_points = { 13612 20 }
+		victory_points = { 13598 1 }
+		victory_points = { 13606 1 }
+		victory_points = { 13616 1 }
+		owner = MUN
+		add_core_of = MUN
+	}
+
+	provinces={
+		13598 13599 13600 13601 13602 13603 13604 13605 13606 13607 13608 13609 13610 13611 13612 13613 13614 13615 13616 13617 13618 13619 13620
+	}
+	manpower=893472
+	buildings_max_level_factor=1.000
+}

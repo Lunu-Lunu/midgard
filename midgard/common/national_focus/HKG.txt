@@ -1,0 +1,1268 @@
+focus_tree = {
+	id = astra_nibbas
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HKG
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 1900 y = 2500 }
+	focus = {
+		id = HKG_marxin_attack_reaction
+		x = 6
+		y = 0
+		cost = 2
+		available = {
+			has_country_flag = HKG_marxin_attacked
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = HKG_consolidate_power
+		relative_position_id = HKG_marxin_attack_reaction
+		x = -3
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				is_historical_focus_on = yes
+				add = 30
+			}
+		}
+		prerequisite = { focus = HKG_marxin_attack_reaction }
+		mutually_exclusive = { focus = HKG_enter_negotiations }
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			remove_country_leader_trait = leonidas_i_trait
+		}
+	}
+	focus = {
+		id = HKG_uproot_niflheim
+		icon = GFX_goal_HKG_focus_attack_niflheim
+		relative_position_id = HKG_consolidate_power
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_consolidate_power }
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = { HKG_anti_niflheim_campaign }
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = HKG_raid_niflheims_bases
+		relative_position_id = HKG_uproot_niflheim
+		x = 0
+		y = 1
+		cost = 4
+		bypass = { neutrality < 0.05 }
+		prerequisite = { focus = HKG_uproot_niflheim }
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		id = HKG_niflheim_defeated
+		relative_position_id = HKG_uproot_niflheim
+		icon = GFX_goal_HKG_focus_kill_niflheim
+		x = 0
+		y = 2
+		cost = 12
+		available = {
+			neutrality < 0.05
+		}
+		prerequisite = { focus = HKG_raid_niflheims_bases }
+		completion_reward = {
+			remove_ideas = { HKG_niflheims_resistance HKG_anti_niflheim_campaign }
+		}
+	}
+	focus = {
+		id = HKG_rally_peasants
+		relative_position_id = HKG_niflheim_defeated
+		x = 0
+		y = 4
+		cost = 8
+		prerequisite = { focus = HKG_shake_astras_control }
+		prerequisite = { focus = HKG_begin_preparations_war }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_ideas = { HKG_rallied_peasants }
+		}
+	}
+	focus = {
+		id = HKG_fight_decadence
+		relative_position_id = HKG_consolidate_power
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_consolidate_power }
+		completion_reward = {
+			add_political_power = -50
+			swap_ideas = { 
+				add_idea = HKG_stimulating_church
+				remove_idea = HKG_decadent_church
+			}
+		}
+	}
+	focus = {
+		id = HKG_replace_pope
+		relative_position_id = HKG_fight_decadence
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_fight_decadence }
+		completion_reward = {
+			add_political_power = -100
+			swap_ideas = { 
+				add_idea = HKG_new_pope
+				remove_idea = HKG_stimulating_church
+			}
+			swap_ideas = {
+				add_idea = HKG_corwen_advisor
+				remove_idea = HKG_midas_advisor
+			}
+			if = {
+				limit = {
+					has_unit_leader = 83509
+				}
+				remove_unit_leader = 83509
+			}
+			MUN = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			TOZ = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			GUI = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			PHE = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			BRE = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			ATH = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			GAI = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			FEN = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			MID = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+					set_nationality = HKG
+				}
+			}
+			HKG = {
+				every_unit_leader = {
+					limit = {
+						has_id = 83503
+					}
+					remove_unit_leader_trait = midnight_brigade_member
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_enforce_church_responsibilities
+		relative_position_id = HKG_replace_pope
+		x = 0
+		y = 1
+		cost = 12
+		prerequisite = { focus = HKG_replace_pope }
+		completion_reward = {
+			swap_ideas = { 
+				add_idea = HKG_church_responsibilities
+				remove_idea = HKG_new_pope
+			}
+		}
+	}
+	focus = {
+		id = HKG_holy_auxilaries
+		relative_position_id = HKG_enforce_church_responsibilities
+		x = 0
+		y = 4
+		cost = 8
+		prerequisite = { focus = HKG_heed_astras_words }
+		prerequisite = { focus = HKG_begin_preparations_war }
+		completion_reward = {
+			army_experience = 5
+			add_ideas = { HKG_church_auxilaries}
+		}
+	}
+	focus = {
+		id = HKG_disinherit_son
+		icon = GFX_goal_HKG_focus_chained_leonidas_ii
+		relative_position_id = HKG_niflheim_defeated
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_niflheim_defeated }
+		prerequisite = { focus = HKG_enforce_church_responsibilities }
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = -100
+			remove_ideas = { HKG_secular_heir }
+		}
+	}
+	focus = {
+		id = HKG_shake_astras_control
+		relative_position_id = HKG_rally_peasants
+		x = 0
+		y = -2
+		cost = 8
+		prerequisite = { focus = HKG_disinherit_son }
+		prerequisite = { focus = HKG_niflheim_defeated }
+		mutually_exclusive = { focus = HKG_heed_astras_words }
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				add_idea = HKG_leonidas_kingdom
+				remove_idea = HKG_astras_whispers
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = HKG_kartr_dynasty_long
+				name = HKG_kartr_dynasty
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "Leonidas I Kartr"
+				desc = ""
+				picture = "Leonidas_Kartr_First.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.4
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
+		}
+	}
+	focus = {
+		id = HKG_heed_astras_words
+		relative_position_id = HKG_holy_auxilaries
+		x = 0
+		y = -2
+		cost = 2
+		prerequisite = { focus = HKG_disinherit_son }
+		prerequisite = { focus = HKG_enforce_church_responsibilities }
+		mutually_exclusive = { focus = HKG_shake_astras_control }
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = HKG_begin_preparations_war
+		relative_position_id = HKG_shake_astras_control
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = {
+			focus = HKG_shake_astras_control
+			focus = HKG_heed_astras_words
+		}
+		completion_reward = {
+			two_random_arms_factory = yes
+			two_random_industrial_complex = yes
+		}
+	}
+	focus = {
+		id = HKG_pressure_fenloch
+		relative_position_id = HKG_begin_preparations_war
+		x = 0
+		y = 2
+		cost = 4
+		prerequisite = { focus = HKG_begin_preparations_war }
+		available = { owns_state = 709 has_war = no }
+		cancel_if_invalid = yes
+		completion_reward = {
+			FEN = {
+				country_event = {
+					id = geri.3
+					hours = 12
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_end_alicernian_influence
+		relative_position_id = HKG_pressure_fenloch
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = HKG_pressure_fenloch }
+		available = { has_subject = FEN }
+		cancel_if_invalid = yes
+		completion_reward = {
+			FEN = {
+				remove_ideas = { alicernians_3 }
+				add_popularity = {
+					popularity = -0.2
+					ideology = democratic
+				}
+				if = {
+					limit = {
+						has_country_leader = {
+							name = "Nathaniel Maxim Caellach"
+							ruling_only = yes
+						}
+					}
+					remove_country_leader_trait = alicern_puppet
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_subjugate_vaettir
+		relative_position_id = HKG_pressure_fenloch
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_pressure_fenloch }
+		prerequisite = { focus = HKG_rally_peasants }
+		mutually_exclusive = { focus = HKG_conquer_vaettir }
+		bypass = {
+			NOT = {
+				country_exists = BRE
+				country_exists = PHE
+				country_exists = GUI
+				country_exists = ATH
+				country_exists = GAI
+				country_exists = FEN
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					BRE = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				BRE = {
+					country_event = {
+						id = geri.4
+						days = 3
+					}
+				}
+				else_if = {
+					limit = {
+						BRE = {
+							exists = yes
+							is_subject = yes
+							NOT = {
+								is_subject_of = HKG
+							}
+						}
+					}
+					create_wargoal = {
+						target = BRE
+						type = annex_everything
+					}
+				}
+			}
+			if = {
+				limit = {
+					PHE = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				PHE = {
+					country_event = {
+						id = geri.4
+						days = 3
+					}
+				}
+				else_if = {
+					limit = {
+						PHE = {
+							exists = yes
+							is_subject = yes
+							NOT = {
+								is_subject_of = HKG
+							}
+						}
+					}
+					create_wargoal = {
+						target = PHE
+						type = annex_everything
+					}
+				}
+			}
+			if = {
+				limit = {
+					GUI = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				GUI = {
+					country_event = {
+						id = geri.4
+						days = 3
+					}
+				}
+				else_if = {
+					limit = {
+						GUI = {
+							exists = yes
+							is_subject = yes
+							NOT = {
+								is_subject_of = HKG
+							}
+						}
+					}
+					create_wargoal = {
+						target = GUI
+						type = annex_everything
+					}
+				}
+			}
+			if = {
+				limit = {
+					ATH = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				ATH = {
+					country_event = {
+						id = geri.4
+						days = 3
+					}
+				}
+				else_if = {
+					limit = {
+						ATH = {
+							exists = yes
+							is_subject = yes
+							NOT = {
+								is_subject_of = HKG
+							}
+						}
+					}
+					create_wargoal = {
+						target = ATH
+						type = annex_everything
+					}
+				}
+			}
+			if = {
+				limit = {
+					GAI = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				GAI = {
+					country_event = {
+						id = geri.4
+						days = 3
+					}
+				}
+				else_if = {
+					limit = {
+						GAI = {
+							exists = yes
+							is_subject = yes
+							NOT = {
+								is_subject_of = HKG
+							}
+						}
+					}
+					create_wargoal = {
+						target = GAI
+						type = annex_everything
+					}
+				}
+			}
+			if = {
+				limit = {
+					FEN = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				FEN = {
+					country_event = {
+						id = geri.4
+						days = 3
+					}
+				}
+				else_if = {
+					limit = {
+						FEN = {
+							exists = yes
+							is_subject = yes
+							NOT = {
+								is_subject_of = HKG
+							}
+						}
+					}
+					create_wargoal = {
+						target = FEN
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_conquer_vaettir
+		relative_position_id = HKG_pressure_fenloch
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_pressure_fenloch }
+		prerequisite = { focus = HKG_holy_auxilaries }
+		mutually_exclusive = { focus = HKG_subjugate_vaettir }
+		bypass = {
+			NOT = {
+				country_exists = BRE
+				country_exists = PHE
+				country_exists = GUI
+				country_exists = ATH
+				country_exists = GAI
+				country_exists = FEN
+			}
+		}
+		will_lead_to_war_with = BRE
+		will_lead_to_war_with = PHE
+		will_lead_to_war_with = GUI
+		will_lead_to_war_with = ATH
+		will_lead_to_war_with = GAI
+		will_lead_to_war_with = FEN
+		completion_reward = {
+			if = {
+				limit = {
+					BRE = {
+						exists = yes
+						NOT = {
+							is_subject_of = HKG
+						}
+					}
+				}
+				create_wargoal = {
+					target = BRE
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					PHE = {
+						exists = yes
+						NOT = {
+							is_subject_of = HKG
+						}
+					}
+				}
+				create_wargoal = {
+					target = PHE
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					GUI = {
+						exists = yes
+						NOT = {
+							is_subject_of = HKG
+						}
+					}
+				}
+				create_wargoal = {
+					target = GUI
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					ATH = {
+						exists = yes
+						NOT = {
+							is_subject_of = HKG
+						}
+					}
+				}
+				create_wargoal = {
+					target = ATH
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					GAI = {
+						exists = yes
+						NOT = {
+							is_subject_of = HKG
+						}
+					}
+				}
+				create_wargoal = {
+					target = GAI
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					FEN = {
+						exists = yes
+						NOT = {
+							is_subject_of = HKG
+						}
+					}
+				}
+				create_wargoal = {
+					target = FEN
+					type = annex_everything
+				}
+			}
+		}
+	}
+	###
+	### Continue Political/Diplomacy Tree Later
+	###
+	focus = {
+		id = HKG_enter_negotiations
+		relative_position_id = HKG_marxin_attack_reaction
+		x = 3
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				is_historical_focus_on = yes
+				add = -30
+			}
+		}
+		prerequisite = { focus = HKG_marxin_attack_reaction }
+		mutually_exclusive = { focus = HKG_consolidate_power }
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	###
+	### Continue Niflheim Tree Later
+	###
+	focus = {
+		id = HKG_invite_foreign_advisors
+		x = 23
+		y = 0
+		cost = 8
+		mutually_exclusive = { focus = HKG_forge_own_path }
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.15
+			Improve_Science_Base = yes
+			add_ideas = { HKG_foreign_advisors }
+		}
+	}
+	focus = {
+		id = HKG_foreign_factory_designs
+		relative_position_id = HKG_invite_foreign_advisors
+		x = 0
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_invite_foreign_advisors }
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = HKG_foreign_company_investment
+		relative_position_id = HKG_foreign_factory_designs
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_foreign_factory_designs }
+		completion_reward = {
+			increase_society_development = yes
+			add_ideas = { HKG_foreign_investment }
+		}
+	}
+	focus = {
+		id = HKG_tap_into_natural_resources
+		relative_position_id = HKG_foreign_factory_designs
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_foreign_factory_designs }
+		completion_reward = {
+			add_tech_bonus = {
+				name = excevation
+				bonus = 1.0
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
+	}
+	focus = {
+		id = HKG_foreign_professors_at_schools
+		relative_position_id = HKG_foreign_factory_designs
+		x = 0
+		y = 3
+		cost = 8
+		prerequisite = { focus = HKG_public_schools }
+		completion_reward = {
+			add_research_slot = 1
+			Improve_Science_Base = 1
+		}
+	}
+	focus = {
+		id = HKG_public_schools
+		relative_position_id = HKG_foreign_professors_at_schools
+		x = 0
+		y = -1
+		cost = 8
+		prerequisite = { focus = HKG_foreign_company_investment focus = HKG_tap_into_natural_resources }
+		completion_reward = {
+			decrease_illiteracy = yes
+		}
+	}
+	focus = {
+		id = HKG_foreign_factories
+		relative_position_id = HKG_public_schools
+		x = -2
+		y = 0
+		cost = 8
+		prerequisite = { focus = HKG_foreign_company_investment }
+		completion_reward = {
+			add_stability = -0.05
+			one_random_industrial_complex = yes
+			one_random_industrial_complex = yes
+		}
+	}
+	focus = {
+		id = HKG_found_national_development_department
+		relative_position_id = HKG_public_schools
+		x = 2
+		y = 0
+		cost = 8
+		prerequisite = { focus = HKG_tap_into_natural_resources }
+		completion_reward = {
+			add_ideas = { HKG_department_of_national_development }
+			two_random_infrastructure = yes
+			two_random_infrastructure = yes
+		}
+	}
+	focus = {
+		id = HKG_make_education_department
+		relative_position_id = HKG_foreign_professors_at_schools
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_found_national_development_department }
+		prerequisite = { focus = HKG_foreign_professors_at_schools }
+		completion_reward = {
+			decrease_illiteracy = yes
+		}
+	}
+	focus = {
+		id = HKG_modern_industrial_practices
+		relative_position_id = HKG_foreign_professors_at_schools
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_foreign_factories }
+		prerequisite = { focus = HKG_foreign_professors_at_schools }
+		completion_reward = {
+			increase_society_development = yes
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = HKG_toast_with_the_advisors
+		relative_position_id = HKG_modern_industrial_practices
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_modern_industrial_practices }
+		prerequisite = { focus = HKG_make_education_department }
+		completion_reward = {
+			add_stability = -0.05
+			decrease_illiteracy = yes
+			Improve_Science_Base = yes
+			increase_society_development = yes
+		}
+	}
+	###
+	### Do The Foreign Advisors Path for Military Later
+	###
+	focus = {
+		id = HKG_negotiate_attaches
+		x = 29
+		y = 0
+		cost = 4
+		available = {
+			has_completed_focus = HKG_invite_foreign_advisors
+		}
+		completion_reward = {
+			country_event = { id = geri.2 }
+		}
+	}
+	###
+	###
+	###
+	focus = {
+		id = HKG_forge_own_path
+		x = 17
+		y = 0
+		cost = 4
+		mutually_exclusive = { focus = HKG_invite_foreign_advisors }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.05
+			increase_society_development_gradual = yes
+		}
+	}
+	focus = {
+		id = HKG_connect_country
+		relative_position_id = HKG_forge_own_path
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_forge_own_path }
+		available_if_capitulated = no
+		completion_reward = {
+			increase_society_development_gradual = yes
+			every_state = {
+				limit = {
+					is_core_of = HKG
+				}
+				if = {
+					limit = {
+						free_building_slots {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_give_farms_tools
+		relative_position_id = HKG_connect_country
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_connect_country }
+		completion_reward = {
+			increase_society_development_gradual = yes
+			add_ideas = { HKG_better_farms }
+		}
+	}
+	focus = {
+		id = HKG_subsidize_rural_industry
+		relative_position_id = HKG_forge_own_path
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_forge_own_path }
+		available_if_capitulated = no
+		completion_reward = {
+			increase_society_development_gradual = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					OR = {
+						has_state_category = pastoral
+						has_state_category = rural
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					OR = {
+						has_state_category = pastoral
+						has_state_category = rural
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_modernize_economics
+		relative_position_id = HKG_subsidize_rural_industry
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_subsidize_rural_industry }
+		completion_reward = {
+			increase_society_development_gradual = yes
+			add_ideas = { HKG_modern_economy }
+		}
+	}
+	focus = {
+		id = HKG_education_subsidies
+		relative_position_id = HKG_forge_own_path
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = HKG_forge_own_path }
+		completion_reward = {
+			increase_society_development_gradual = yes
+			decrease_illiteracy = yes
+		}
+	}
+	focus = {
+		id = HKG_tap_into_resources
+		relative_position_id = HKG_connect_country
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = HKG_connect_country }
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+		available = {
+			controls_state = 699
+			controls_state = 700
+			controls_state = 702
+			controls_state = 706
+		}
+		completion_reward = {
+			increase_society_development_gradual = yes
+			add_ideas = { HKG_tapping_resources }
+			699 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_resource = {
+					type = tungsten
+					amount = 6
+				}
+			}
+			700 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+			702 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+			}
+			706 = {
+				add_resource = {
+					type = oil
+					amount = 18
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_public_works_programs
+		relative_position_id = HKG_tap_into_resources
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = HKG_tap_into_resources }
+		completion_reward = {
+			increase_society_development_gradual = yes
+			add_ideas = { HKG_public_works }
+		}
+	}
+	focus = {
+		id = HKG_appropriate_noble_lands
+		relative_position_id = HKG_subsidize_rural_industry
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = HKG_subsidize_rural_industry }
+		available_if_capitulated = no
+		completion_reward = {
+			increase_society_development_gradual = yes
+			add_ideas = { HKG_noble_lands_taken }
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						has_state_category = small_town
+						has_state_category = town
+						has_state_category = city
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						has_state_category = small_town
+						has_state_category = town
+						has_state_category = city
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_schools_everywhere
+		relative_position_id = HKG_education_subsidies
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = HKG_education_subsidies }
+		completion_reward = {
+			increase_society_development_gradual = yes
+			add_ideas = { HKG_expensive_education }
+			decrease_illiteracy = yes
+			Improve_Science_Base = yes
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = HKG_mass_industrialization
+		relative_position_id = HKG_appropriate_noble_lands
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = HKG_appropriate_noble_lands }
+		available_if_capitulated = no
+		completion_reward = {
+			increase_society_development_gradual = yes
+			two_random_industrial_complex = yes
+			two_random_industrial_complex = yes
+			one_random_industrial_complex = yes
+		}
+	}
+	focus = {
+		id = HKG_mass_militarization
+		relative_position_id = HKG_schools_everywhere
+		x = 0
+		y = 2
+		cost = 8
+		prerequisite = { focus = HKG_schools_everywhere }
+		prerequisite = { focus = HKG_mass_industrialization }
+		prerequisite = { focus = HKG_public_works_programs }
+		available_if_capitulated = no
+		completion_reward = {
+			increase_society_development_gradual = yes
+			two_random_arms_factory = yes
+			one_random_arms_factory = yes
+			one_random_arms_factory = yes
+		}
+	}
+	focus = {
+		id = HKG_ashen_military_academy
+		relative_position_id = HKG_mass_militarization
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_mass_militarization }
+		prerequisite = { focus = HKG_public_works_programs }
+		completion_reward = {
+			increase_society_development_gradual = yes
+			add_research_slot = 1
+			Improve_Science_Base = yes
+			decrease_illiteracy = yes
+		}
+	}
+	focus = {
+		id = HKG_marxin_supreme
+		relative_position_id = HKG_mass_militarization
+		x = 1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_mass_militarization }
+		prerequisite = { focus = HKG_mass_industrialization }
+		available = {
+			controls_state = 700
+		}
+		cancel_if_invalid = yes
+		available_if_capitulated = no
+		completion_reward = {
+			increase_society_development_gradual = yes
+			700 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = HKG_the_new_geri
+		relative_position_id = HKG_marxin_supreme
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = HKG_ashen_military_academy }
+		prerequisite = { focus = HKG_marxin_supreme }
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.1
+			add_political_power = 200
+			increase_society_development_gradual = yes
+			Improve_Science_Base = yes
+			decrease_illiteracy = yes
+		}
+	}
+	###
+	### AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	###
+}

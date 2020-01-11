@@ -1,0 +1,21 @@
+
+state={
+	id=705
+	name="STATE_705"
+
+	state_category = town
+
+	history={
+		buildings = {
+			infrastructure = 5
+		}
+		owner = HKG
+		add_core_of = HKG
+	}
+
+	provinces={
+		13347 13368 13646 13647 13648 13673 13674 13675 13676 13677 13678 13679 13680
+	}
+	manpower=537499
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=684
+	name="STATE_684"
+
+	state_category = city
+
+	history={
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 3
+		}
+		victory_points = { 13386 1 }
+		victory_points = { 13354 1 }
+		victory_points = { 13381 5 }
+		victory_points = { 13382 1 }
+		victory_points = { 13380 5 }
+		victory_points = { 13379 15 }
+		victory_points = { 13378 1 }
+		owner = ATH
+		add_core_of = ATH
+	}
+
+	provinces={
+		13354 13378 13379 13380 13381 13382 13383 13384 13385 13386 
+	}
+	manpower=2537239
+	buildings_max_level_factor=1.000
+}

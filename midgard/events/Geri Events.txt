@@ -1,0 +1,62 @@
+﻿add_namespace = geri
+
+country_event = {
+	id = geri.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event geri.1"}
+	title = geri.1.t
+	desc = geri.1.desc
+	picture = report_event_technical
+	trigger = {
+		tag = HKG
+		has_government = fascism
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+
+	fire_only_once = yes
+
+	option = { # the attack
+		name = geri.1.a
+		ai_chance = { factor = 100 }
+		700 = {
+			damage_building = {
+				type = arms_factory
+				damage = 1.5
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.5
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		add_stability = -0.1
+		set_country_flag = HKG_marxin_attacked	
+	}
+}
+
+country_event = { # considering the military attache
+	id = geri.2
+	title = geri.2.t
+	desc = geri.2.desc
+	is_triggered_only = yes
+	option = { # The Minotaurs (Superior Firepower)
+		name = geri.2.a
+		add_ideas = { HKG_minotaur_attache }
+	}
+	option = { # The Riverponies (Grand Battleplan)
+		name = geri.2.b
+		add_ideas = { HKG_pony_attache }
+	}
+	option = { # The Griffons (Mobile Warfare)
+		name = geri.2.c
+		add_ideas = { HKG_griffon_attache }
+	}
+}

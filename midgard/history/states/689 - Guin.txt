@@ -1,0 +1,27 @@
+
+state={
+	id=689
+	name="STATE_689"
+
+	state_category = large_city
+
+	history={
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 3
+		}
+		victory_points = { 13355 1 }
+		victory_points = { 13432 15 }
+		victory_points = { 13430 1 }
+		victory_points = { 13431 10 }
+		owner = GUI
+		add_core_of = GUI
+	}
+
+	provinces={
+		13355 13428 13429 13430 13431 13432 13433 13434 13435 13436 13437
+	}
+	manpower=1845788
+	buildings_max_level_factor=1.000
+}

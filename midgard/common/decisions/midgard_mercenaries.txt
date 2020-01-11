@@ -1,0 +1,111 @@
+midgard_mercenaries_category = {
+	hire_midnight_brigade = {
+		icon = rifles
+		available = {
+			NOT = {
+				has_global_flag = midnight_brigade_hired
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 160
+				has_war = yes
+			}
+		}
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision hire_midnight_brigade"
+			set_country_flag = hired_midnight_brigade
+			set_global_flag = midnight_brigade_hired
+			custom_effect_tooltip = HIRE_MIDNIGHT_BRIGADE_TT
+			hidden_effect = {
+				activate_decision = remove_midnight_brigade
+				MID = {
+					every_unit_leader = {
+						limit = {
+							has_trait = midnight_brigade_member
+						}
+						set_nationality = ROOT
+					}
+				}
+				if = {
+					limit = {
+						original_tag = TOZ
+					}
+					load_oob = "TOZ_midnight_brigade"
+				}
+				if = {
+					limit = {
+						original_tag = HKG
+					}
+					load_oob = "HKG_midnight_brigade"
+				}
+				if = {
+					limit = {
+						original_tag = MUN
+					}
+					load_oob = "MUN_midnight_brigade"
+				}
+				if = {
+					limit = {
+						original_tag = FEN
+					}
+					load_oob = "FEN_midnight_brigade"
+				}
+				if = {
+					limit = {
+						original_tag = ATH
+					}
+					load_oob = "ATH_midnight_brigade"
+				}
+				if = {
+					limit = {
+						original_tag = GAI
+					}
+					load_oob = "GAI_midnight_brigade"
+				}
+				if = {
+					limit = {
+						original_tag = BRE
+					}
+					load_oob = "BRE_midnight_brigade"
+				}
+				if = {
+					limit = {
+						original_tag = GUI
+					}
+					load_oob = "GUI_midnight_brigade"
+				}
+				if = {
+					limit = {
+						original_tag = PHE
+					}
+					load_oob = "PHE_midnight_brigade"
+				}
+			}
+		}
+	}
+	remove_midnight_brigade = {
+		icon = rifles
+		visible = {
+			has_country_flag = hired_midnight_brigade
+		}
+		days_remove = 200
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove remove_midnight_brigade"
+			custom_effect_tooltip = REMOVE_MIDNIGHT_BRIGADE_TT
+			hidden_effect = {
+				clr_country_flag = hired_midnight_brigade
+				clr_global_flag = midnight_brigade_hired
+				delete_unit_template_and_units = { division_template = "Midnight Brigade" }
+				every_unit_leader = {
+					limit = {
+						has_trait = midnight_brigade_member
+					}
+					set_nationality = MID
+				}
+			}
+		}
+	}
+}
