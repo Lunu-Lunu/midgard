@@ -98,8 +98,8 @@ create_field_marshal = {
 	picture = "Vansel_Athnes.dds"
 	traits = { brilliant_strategist }
 	skill = 5
-	attack_skill = 5
-	defense_skill = 4
+	attack_skill = 4
+	defense_skill = 3
 	planning_skill = 5
 	logistics_skill = 2
 }
@@ -111,7 +111,7 @@ create_corps_commander = {
 	skill = 4
 	attack_skill = 3
 	defense_skill = 3
-	planning_skill = 5
+	planning_skill = 4
 	logistics_skill = 2
 }
 

@@ -98,9 +98,9 @@ create_field_marshal = {
 	traits = { inspirational_leader politically_connected }
 	skill = 5
 	attack_skill = 3
-	defense_skill = 6
+	defense_skill = 5
 	planning_skill = 3
-	logistics_skill = 4
+	logistics_skill = 3
 }
 
 set_rule = {

@@ -78,7 +78,7 @@ create_corps_commander  = {
 	portrait_path = "gfx/leaders/TOZ/Raven_Tozoku.dds"
 	traits = { brilliant_strategist inspiring_leader wielder_tartaros }
 	skill = 5
-	attack_skill = 9
+	attack_skill = 6
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
@@ -99,7 +99,7 @@ create_corps_commander = {
 	traits = { inflexible_strategist }
 	skill = 4
 	attack_skill = 2
-	defense_skill = 5
+	defense_skill = 4
 	planning_skill = 3
 	logistics_skill = 3
 }
@@ -109,7 +109,7 @@ create_corps_commander = {
 	traits = { armor_officer }
 	skill = 4
 	attack_skill = 4
-	defense_skill = 3
+	defense_skill = 2
 	planning_skill = 4
 	logistics_skill = 2
 }
@@ -121,7 +121,7 @@ create_corps_commander = {
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 4
-	logistics_skill = 4
+	logistics_skill = 3
 }
 set_rule = {
 	can_generate_female_aces = yes
